@@ -293,7 +293,7 @@ const Store = (props) => {
   // pass {cart, product} to the src attribute of the component <ReactJson/>
 
   const cart = useSelector((state) => state.cart);
-  const product = useSelector((state) => state.products);
+  const products = useSelector((state) => state.product);
   return (
     <WrapperBox>
       <Typography
@@ -306,7 +306,7 @@ const Store = (props) => {
       <Box sx={{ textAlign: "start" }}>
         <ReactJson
           name="store"
-          src={{ cart, product }}
+          src={{ cart, products }}
           theme="monokai"
           displayDataTypes={false}
           displayObjectSize={false}
